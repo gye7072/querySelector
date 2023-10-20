@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<body onload = "random()">
+<h1>Random Colors</h1>
+<h3>Click randomize to randomize the colors</h3>
+<p>This is one random color</p>
+<div>This is another random color</div>
+<p></p>
+<span>This is the third random color</span>
+<p></p>
+<button onClick="reset()">Randomize</button>
+
+<style>
+    body {
+        text-align: center;
+    }
+</style>
+<script>
+    let randomNum1 = "";
+    let randomNum2 = "";
+    let randomNum3 = "";
+    let arr = ["red", "blue", "green"];
+
+    function random() {
+        randomNum1 = Math.floor(Math.random() * 3) + 0;
+        randomNum2 = Math.floor(Math.random() * 3) + 0;
+        randomNum3 = Math.floor(Math.random() * 3) + 0;
+        arr = [arr[randomNum1], arr[randomNum2], arr[randomNum3]];
+        document.querySelector("p").style.color = arr[0];
+        document.querySelector("div").style.color = arr[1];
+        document.querySelector("span").style.color = arr[2];
+
+
+    }
+
+    function reset(){
+        randomNum1 = "";
+        randomNum2 = "";
+        randomNum3 = "";
+        arr = ["red", "blue", "green"];
+        random();
+    }
+
+</script>
+</body>
+</html>
